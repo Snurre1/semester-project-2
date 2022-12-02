@@ -1,3 +1,22 @@
 @import "variables.scss";
 
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
+
+.p1 {
+    font-size: 5rem;
+}
+
+:root {
+    --bs-body-font-family: 'Times New Roman';
+}
+
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.headers {
+    font-family: 'Bitter', serif;
+}
