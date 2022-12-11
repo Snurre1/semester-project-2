@@ -45,12 +45,54 @@
     </header>
     <main>
       <h1 class="text-center headers m-4">Register for an account</h1>
+      <div class="container-fluid w-75 p-5">
+        <form id="registerForm">
+          <div class="mb-3">
+            <label for="text" class="form-label">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control bg-light"
+              pattern="^[\w]+$"
+              title="Must only contain lower case and upper case letters, numbers and underscore. Example: HelloImauser"
+              maxlength="20"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control bg-light"
+              pattern="^[\w\-.]+@(stud.)?noroff.no$"
+              title="only people with stud.noroff.no can register"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control bg-light"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Avatar</label>
+            <input type="url" name="avatar" class="form-control bg-light" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </main>
     <footer>
       <div class="container-fluid bg-light text-center fixed-bottom">
         Thomas Henriksen &copy;
       </div>
     </footer>
+    <script type="module" src="/js/handlers/register.mjs"></script>
+    <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
