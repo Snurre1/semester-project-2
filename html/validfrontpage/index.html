@@ -31,21 +31,23 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../frontpage/index.html"
+                  href="../validfrontpage/index.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../login/index.html">Login</a>
+                <a class="nav-link" href="../register/index.html">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../register/index.html">Register</a>
+                <a class="nav-link clickthis" href="../frontpage/index.html"
+                  >Logout</a
+                >
               </li>
             </ul>
           </div>
-          <p class="nav-item">
+          <div class="nav-item">
             <p class="credits nav-link m-3"></p>
-          </p>
+          </div>
         </div>
       </nav>
     </header>
@@ -60,6 +62,7 @@
         Thomas Henriksen &copy;
       </div>
     </footer>
+    <script type="module" src="/js/handlers/logout.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>

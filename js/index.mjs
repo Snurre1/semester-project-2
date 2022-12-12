@@ -2,6 +2,7 @@ import { setGetListingsListener } from "./handlers/frontpage.mjs";
 import { setRegisterFormListener } from "./handlers/register.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
 import { setGetProfileListener } from "./handlers/validfrontpage.mjs";
+
 const path = location.pathname;
 if (path === "/html/frontpage/index.html") {
   setGetListingsListener();
