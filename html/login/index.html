@@ -28,15 +28,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
+                <a class="nav-link" href="../frontpage/index.html">Home</a>
+              </li>
+              <li class="nav-item">
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../frontpage/index.html"
-                  >Home</a
+                  href="../login/index.html"
+                  >Login</a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../login/index.html">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../register/index.html">Register</a>
@@ -47,23 +47,41 @@
       </nav>
     </header>
     <main>
-      <h1 class="text-center headers m-4"
-        >Welcome to lux, a site for your auctions</h1
-      >
-      <h2 class="text-center headers">Available auctions</h2>
-      <div class="input-group mb-3 bg-light">
-        <span class="input-group-text" id="inputGroup-sizing-default"
-          >Search</span
-        >
-        <input type="text" class="form-control bg-light" id="targetme" />
+      <h1 class="text-center headers m-4">Login</h1>
+      <div class="container-fluid w-75 p-5">
+        <form id="loginForm">
+          <div class="container-sm p-5">
+            <div class="mb-3">
+              <label for="" class="col-form-label">E-mail:</label>
+              <input
+                type="email"
+                class="form-control bg-light"
+                name="email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="col-form-label">Password</label>
+              <input
+                type="password"
+                class="form-control bg-light"
+                name="password"
+                required
+              />
+            </div>
+            <div class="container text-center">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="container bg-light frontpageAPI col"></div>
     </main>
     <footer>
       <div class="container-fluid bg-light text-center fixed-bottom">
         Thomas Henriksen &copy;
       </div>
     </footer>
+    <script type="module" src="/js/handlers/login.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>

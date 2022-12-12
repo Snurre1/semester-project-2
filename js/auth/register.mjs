@@ -11,5 +11,4 @@ export async function register(profile) {
     body,
   });
   const result = await response.json();
-  console.log(result);
 }
