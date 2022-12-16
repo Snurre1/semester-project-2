@@ -3,7 +3,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const method = "post";
 
-export async function createListings(postData) {
+export async function createListing(postData) {
   const response = await authFetch(API_LISTINGS_URL, {
     method,
     body: JSON.stringify(postData),

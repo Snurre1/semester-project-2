@@ -3,7 +3,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const method = "put";
 
-export async function updateListings(postData) {
+export async function updateListing(postData) {
   if (!postData.id) {
     alert("Update requres an ID");
   }

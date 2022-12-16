@@ -49,7 +49,16 @@
     <main>
       <h1 class="text-center headers m-4">Login</h1>
       <div class="container-fluid w-75 p-5">
-        <form id="loginForm" action="../validfrontpage/index.html">
+        <div class="container-fluid text-center">
+          <p class="h2 loginTarget2" hidden>Login Success</p>
+          <a
+            class="btn btn-primary loginTarget1"
+            hidden
+            href="/html/validfrontpage/index.html"
+            >Move to our auctions</a
+          >
+        </div>
+        <form action="/html/validfrontpage/index.html" id="loginForm">
           <div class="container-sm p-5">
             <div class="mb-3">
               <label for="" class="col-form-label">E-mail:</label>
@@ -70,7 +79,9 @@
               />
             </div>
             <div class="container text-center">
-              <button type="submit" class="btn btn-primary">Login</button>
+              <button type="submit" class="btn btn-primary loginbtn"
+                >Login</button
+              >
             </div>
           </div>
         </form>
@@ -81,7 +92,7 @@
         Thomas Henriksen &copy;
       </div>
     </footer>
-    <script type="module" src="/js/handlers/login.mjs"></script>
+    <script type="module" src="/js/handlers/loginSuccess.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>

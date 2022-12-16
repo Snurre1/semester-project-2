@@ -1,19 +1,19 @@
 export function postTemplate(postData) {
   const listing = document.createElement("div");
   listing.classList.add("row", "border", "border-dark", "m-5", "p-4");
-  const Container = document.createElement("div");
-  Container.classList.add("container", "bg-light", "text-center");
-  listing.append(Container);
+  const container = document.createElement("div");
+  container.classList.add("container", "bg-light", "text-center");
+  listing.append(container);
   const titleContainer = document.createElement("div");
   titleContainer.classList.add("container");
-  Container.append(titleContainer);
+  container.append(titleContainer);
   const titleBracket = document.createElement("h4");
   titleBracket.innerText = `Title: ${postData.title}`;
   titleContainer.append(titleBracket);
   if (postData.media) {
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("container", "w-50");
-    Container.append(imageContainer);
+    container.append(imageContainer);
     const image = document.createElement("img");
     image.classList.add("img-thumbnail");
     image.src = `${postData.media[0]}`;
@@ -22,13 +22,19 @@ export function postTemplate(postData) {
   }
   const descriptionContainer = document.createElement("div");
   descriptionContainer.classList.add("container");
-  Container.append(descriptionContainer);
+  container.append(descriptionContainer);
   const description = document.createElement("p");
   description.innerText = `Description of the item: ${postData.description}`;
   descriptionContainer.append(description);
+  const deadlineContainer = document.createElement("div");
+  deadlineContainer.classList.add("container");
+  container.append(deadlineContainer);
+  const deadline = document.createElement("p");
+  deadline.innerText = `Deadline: ${postData.endsAt}`;
+  deadlineContainer.append(deadline);
   const buttonsContainer = document.createElement("div");
   buttonsContainer.classList.add("container");
-  Container.append(buttonsContainer);
+  container.append(buttonsContainer);
   const buttonOne = document.createElement("a");
   buttonOne.classList.add("btn", "btn-primary", "m-2");
   buttonOne.innerText = "Make a bid";

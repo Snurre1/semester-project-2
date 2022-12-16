@@ -28,15 +28,23 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
+                <a class="nav-link" href="../validfrontpage/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../listings/index.html"
+                  >View Listings</a
+                > </li
+              ><li class="nav-item">
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../validfrontpage/index.html"
-                  >Home</a
+                  href="../listings/listing.html"
+                  >Create Listing</a
+                > </li
+              ><li class="nav-item">
+                <a class="nav-link" href="../validfrontpage/index.html"
+                  >Update avatar</a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../register/index.html">Register</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link clickthis" href="../frontpage/index.html"
@@ -45,21 +53,74 @@
               </li>
             </ul>
           </div>
-          <div class="nav-item">
-            <p class="credits nav-link m-3"></p>
-          </div>
         </div>
       </nav>
     </header>
     <main>
-      <h1 class="text-center headers m-4">Listings</h1>
-      <div class="container bg-light col" id="listings"> </div>
+      <h1 class="text-center headers m-4"> Create a listing</h1>
+      <div class="container-fluid w-75 p-5">
+        <div class="container-fluid text-center">
+          <p class="h2 successTarget2" hidden>Success</p>
+          <a
+            class="btn btn-primary successTarget1"
+            hidden
+            href="/html/validfrontpage/index.html"
+            >Return to home</a
+          >
+        </div>
+        <form id="createListing">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              name="title"
+              class="form-control bg-light"
+              pattern="^[\w]+$"
+              maxlength="20"
+              placeholder="Your title of the listing"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="media" class="form-label">Image</label>
+            <input
+              type="url"
+              name="media"
+              class="form-control bg-light"
+              placeholder="Link your URL for the image here"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label"></label>
+            <textarea
+              type="text"
+              name="description"
+              class="form-control bg-light"
+              required
+              placeholder="Your description of the listing"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Deadline</label>
+            <input
+              type="date"
+              name="endsAt"
+              class="form-control bg-light"
+              placeholder="YYYY-MM-DD"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary successbtn"
+            >Submit</button
+          >
+        </form>
+      </div>
     </main>
     <footer>
       <div class="container-fluid bg-light text-center fixed-bottom">
         Thomas Henriksen &copy;
       </div>
     </footer>
+    <script type="module" src="/js/handlers/createSuccess.mjs"></script>
     <script type="module" src="/js/handlers/logout.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
