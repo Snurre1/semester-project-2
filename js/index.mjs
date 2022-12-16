@@ -21,4 +21,6 @@ if (path === "/html/frontpage/index.html") {
   testTemplate();
 } else if (path === "/html/listings/listing.html") {
   listeners.setCreateListingListener();
+} else if (path === "/html/updateavatar/index.html") {
+  listeners.setUpdateProfileListener();
 }

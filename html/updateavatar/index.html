@@ -35,14 +35,14 @@
                   >View Listings</a
                 > </li
               ><li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="../listings/listing.html"
+                <a class="nav-link" href="../listings/listing.html"
                   >Create Listing</a
                 > </li
               ><li class="nav-item">
-                <a class="nav-link" href="../updateavatar/index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../updateavatar/index.html"
                   >Update avatar</a
                 >
               </li>
@@ -57,7 +57,7 @@
       </nav>
     </header>
     <main>
-      <h1 class="text-center headers m-4"> Create a listing</h1>
+      <h1 class="text-center headers m-4"> Update Avatar</h1>
       <div class="container-fluid w-75 p-5">
         <div class="container-fluid text-center">
           <p class="h2 successTarget2" hidden>Success</p>
@@ -68,50 +68,44 @@
             >Return to home</a
           >
         </div>
-        <form id="createListing">
+        <div class="container w-50 text-center"
+          ><img
+            class="img-thumbnail thistarget"
+            alt="Avatar"
+            src="https://via.placeholder.com/150"
+        /></div>
+        <form id="editProfile">
           <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
+            <label class="form-label">Name</label>
             <input
               type="text"
-              name="title"
+              name="name"
               class="form-control bg-light"
-              pattern="^[\w]+$"
-              maxlength="20"
-              placeholder="Your title of the listing"
-              required
+              disabled
+            /> </div
+          ><div class="mb-3">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control bg-light"
+              disabled
             />
           </div>
           <div class="mb-3">
-            <label for="media" class="form-label">Image</label>
+            <label class="form-label">Avatar</label>
             <input
               type="url"
-              name="media"
-              class="form-control bg-light"
-              placeholder="Link your URL for the image here"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="description" class="form-label"></label>
-            <textarea
-              type="text"
-              name="description"
+              name="avatar"
               class="form-control bg-light"
               required
-              placeholder="Your description of the listing"
-            ></textarea>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Deadline</label>
-            <input
-              type="date"
-              name="endsAt"
-              class="form-control bg-light"
-              placeholder="YYYY-MM-DD"
             />
           </div>
-          <button type="submit" class="btn btn-primary successbtn"
-            >Submit</button
-          >
+          <div class="container text-center">
+            <button type="submit" class="btn btn-primary updatebtn"
+              >Update Profile</button
+            >
+          </div>
         </form>
       </div>
     </main>
@@ -120,7 +114,6 @@
         Thomas Henriksen &copy;
       </div>
     </footer>
-    <script type="module" src="/js/handlers/createSuccess.mjs"></script>
     <script type="module" src="/js/handlers/logout.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
