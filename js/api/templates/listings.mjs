@@ -42,8 +42,8 @@ export function postTemplate(postData) {
   buttonsContainer.append(buttonOne);
   const buttonTwo = document.createElement("a");
   buttonTwo.classList.add("btn", "btn-primary", "m-2");
-  buttonTwo.innerText = "View bids";
-  buttonTwo.href = `/html/bids/viewbids.html?id=${postData.id}`;
+  buttonTwo.innerText = "View listing";
+  buttonTwo.href = `/html/listings/viewlisting.html?id=${postData.id}`;
   buttonsContainer.append(buttonTwo);
   return listing;
 }

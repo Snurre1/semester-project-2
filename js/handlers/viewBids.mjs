@@ -3,22 +3,35 @@ import { API_LISTINGS_URL } from "../api/constants.mjs";
 const container = document.querySelector(".viewBids");
 const url = new URL(location.href);
 const id = url.searchParams.get("id");
-export async function hello() {
+export async function helloBids() {
   try {
-    const API_ID = `${API_LISTINGS_URL}/${id}`;
+    const API_ID = `${API_LISTINGS_URL}/${id}?_seller=true&_bids=true`;
     const response = await authFetch(API_ID);
     const result = await response.json();
-    container.innerHTML += `<div class="row border bg-light border-dark m-5 p-4">
+    const loopIT = result.bids;
+    const newArray = loopIT.sort((a, b) => a.amount - b.amount);
+    const reverseArray = newArray.reverse();
+    console.log(reverseArray);
+    container.innerHTML = `<div class="container text-center">
+            <a
+              href="/html/listings/index.html?id=${result.id}"
+              class="btn btn-primary m-2"
+            >
+              Back
+            </a>
+          </div>`;
+    for (let i = 0; i < reverseArray.length; i++) {
+      container.innerHTML += `<div class="row border bg-light border-dark m-5 p-4">
                                 <div class="container text-center">
-                                  <div class="container"><h4>Title: ${result.title}</h4></div>
-                                  <div class="container w-50"><img class="img-thumbnail" src="${result.media}"alt="image from ${result.title}"></img></div>
-                                  <div class="container"><p>Description of the item: ${result.description}</p></div>
-                                  <div class="container"><p>Amount of bids: ${result._count.bids}
-                                  <div class="container"><p>Deadline: ${result.endsAt}
-                                  <div class ="container"><a href="/html/listings/index.html" class="btn btn-primary m-2">Back</a></div>
+                                  <div class="container"><h4>bidderName: ${reverseArray[i].bidderName}</h4></div>
+                                  <div class="container"><p>Amount of bid:${reverseArray[i].amount}</p></div>
+                                  <div class="container"><p>When bid where made: ${reverseArray[i].created}</p></div>
+                                  
                                 </div>                     
                               </div>`;
+    }
   } catch (error) {
     container.innerHTML = `<div><p>Something went wrong, try again</p></div>`;
   }
 }
+helloBids();

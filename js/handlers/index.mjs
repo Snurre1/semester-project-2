@@ -4,4 +4,4 @@ export * from "./login.mjs";
 export * from "./register.mjs";
 export * from "./validfrontpage.mjs";
 export * from "./updateProfile.mjs";
-export * from "./viewBids.mjs";
+export * from "./viewListing.mjs";

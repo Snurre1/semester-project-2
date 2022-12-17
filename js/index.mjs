@@ -23,6 +23,6 @@ if (path === "/html/frontpage/index.html") {
   listeners.setCreateListingListener();
 } else if (path === "/html/updateavatar/index.html") {
   listeners.setUpdateProfileListener();
-} else if (path === "/html/bids/viewbids.html") {
+} else if (path === "/html/listings/viewlisting.html") {
   listeners.hello();
 }
