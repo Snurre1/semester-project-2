@@ -11,7 +11,6 @@ export async function helloBids() {
     const loopIT = result.bids;
     const newArray = loopIT.sort((a, b) => a.amount - b.amount);
     const reverseArray = newArray.reverse();
-    console.log(reverseArray);
     container.innerHTML = `<div class="container text-center">
             <a
               href="/html/listings/index.html?id=${result.id}"
@@ -34,4 +33,3 @@ export async function helloBids() {
     container.innerHTML = `<div><p>Something went wrong, try again</p></div>`;
   }
 }
-helloBids();

@@ -38,7 +38,7 @@ export function postTemplate(postData) {
   const buttonOne = document.createElement("a");
   buttonOne.classList.add("btn", "btn-primary", "m-2");
   buttonOne.innerText = "Make a bid";
-  buttonOne.href = `/html/listings/listing.html?id=${postData.id}`;
+  buttonOne.href = `/html/bids/makebids.html?id=${postData.id}`;
   buttonsContainer.append(buttonOne);
   const buttonTwo = document.createElement("a");
   buttonTwo.classList.add("btn", "btn-primary", "m-2");

@@ -5,3 +5,4 @@ export * from "./register.mjs";
 export * from "./validfrontpage.mjs";
 export * from "./updateProfile.mjs";
 export * from "./viewListing.mjs";
+export * from "./viewBids.mjs";

@@ -32,12 +32,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="../validfrontpage/index.html"
-                  >Home</a
-                >
+                <a class="nav-link" href="../validfrontpage/index.html">Home</a>
               </li>
             </ul>
           </div>
@@ -45,15 +40,30 @@
       </nav>
     </header>
     <main>
-      <h1 class="text-center headers m-4">View bids</h1>
+      <h1 class="text-center headers m-4">Make a bid</h1>
 
-      <div class="container viewBids col"></div>
+      <form id="makeBid">
+        <div class="container w-50">
+          <div class="mb-3">
+            <label class="form-label">Amount</label>
+            <input
+              type="Number"
+              name="amount"
+              class="form-control bg-light bids"
+            />
+          </div>
+          <div class="container text-center">
+            <button type="submit" class="btn btn-primary">Make your bid</button>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
       <div class="container-fluid bg-light text-center fixed-bottom">
         Thomas Henriksen &copy;
       </div>
     </footer>
+    <script type="module" src="/js/handlers/makeBids.mjs"></script>
     <script type="module" src="/js/index.mjs"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>

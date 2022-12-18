@@ -8,7 +8,6 @@ export async function hello() {
     const API_ID = `${API_LISTINGS_URL}/${id}`;
     const response = await authFetch(API_ID);
     const result = await response.json();
-    console.log(result);
     container.innerHTML += `<div class="row border bg-light border-dark m-5 p-4">
                                 <div class="container text-center">
                                   <div class="container"><h4>Title: ${result.title}</h4></div>

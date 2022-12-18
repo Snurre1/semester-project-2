@@ -25,4 +25,6 @@ if (path === "/html/frontpage/index.html") {
   listeners.setUpdateProfileListener();
 } else if (path === "/html/listings/viewlisting.html") {
   listeners.hello();
+} else if (path === "/html/bids/viewbids.html") {
+  listeners.helloBids();
 }
