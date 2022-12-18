@@ -4,7 +4,7 @@ import * as listingmethods from "./api/listings/index.mjs";
 import { renderListingsTemplates } from "./api/templates/index.mjs";
 
 const path = location.pathname;
-if (path === "/html/frontpage/index.html") {
+if (path === "/index.html") {
   listeners.setGetListingsListener();
 } else if (path === "/html/register/index.html") {
   listeners.setRegisterFormListener();
