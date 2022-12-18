@@ -8,6 +8,5 @@ export function setCreateListingListener() {
     const formData = new FormData(form);
     const listing = Object.fromEntries(formData.entries());
     createListing(listing);
-    console.log(listing);
   });
 }
