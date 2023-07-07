@@ -9,7 +9,7 @@ A simple overview of the use/purpose of the project.
 A site for auctions, this was my semester project in the second year at Noroff. 
 This was made to gain experience of making sites with Bootstrap and Sass.
 
-Built With
+## Built With
 
 - HTML
 - CSS
