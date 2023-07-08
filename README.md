@@ -3,8 +3,6 @@
 ![luuuux](https://github.com/Snurre1/semester-project-2/assets/91470645/63364e3e-1455-454a-b8ee-796e115984a1)
  
 
-A simple overview of the use/purpose of the project.
-
 ## Description
 A site for auctions, this was my semester project in the second year at Noroff. 
 This was made to gain experience of making sites with Bootstrap and Sass.
